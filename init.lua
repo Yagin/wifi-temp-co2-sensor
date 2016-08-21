@@ -1,7 +1,6 @@
 -- Данные с DHT11 считывает только при частоте CPU в 160 MHz
 -- пока не разобрался почему
 node.setcpufreq(node.CPU160MHZ);
-
 wifi.setmode(wifi.STATIONAP);
 
 -- "подключаем" переменные
