@@ -11,7 +11,7 @@ gHumi   = 0;
 -- Адрес php скрипта для GET запроса.
 -- вызов будет выглядеть следующим образом
 -- http://www.my-site.com/my-get.php?ppm=545&temp=24&humi=40
-gURL    = "http://www.yagin.kz/get-sensor-data.php";
+gURL    = "http://www.my-site.com/my-get.php";
 -- Частота опроса датчиков
 gFreqSensReading = 15000;
 -- Файл конфигураций
