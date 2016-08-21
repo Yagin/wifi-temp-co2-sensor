@@ -1,14 +1,12 @@
 -- Файл подключения к точке-доступа
 local APREQ="ap_server.lua";
-wifi.setmode(wifi.STATIONAP);
 cfg={};
 cfg.ssid = "node-" .. node.chipid();
 cfg.pwd  = "node-" .. node.chipid();
 
 wifi.ap.config(cfg);
 
-print("AP network configuration");
-print(wifi.ap.getip());
+GetNetworkConf();
 
 dofile(APREQ)
 

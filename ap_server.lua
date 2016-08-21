@@ -13,7 +13,7 @@ srv:listen(80,
             end
             local _GET = {}
             if (vars ~= nil)then
-                for k, v in string.gmatch(vars, "(%w+)=(%w+)&*") do
+                for k, v in string.gmatch(vars, "(%w+)=([%w+-]*)&*") do
                     _GET[k] = v
                 end
                 file.remove(gConfgiFile);
@@ -24,7 +24,6 @@ srv:listen(80,
                 node.restart();
                 buf = buf.."<HTML><HEAD><meta http-equiv=\"refresh\" content=\"0;/\"></HEAD></HTML>"
             end
-
             if(_GET.ssid == nil)then
             buf = buf..[[
             <HTML><HEAD><TITLE>ENTER NEW AP PARAMETERS</TITLE>
