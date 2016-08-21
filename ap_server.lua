@@ -18,7 +18,6 @@ srv:listen(80,
                 end
                 file.remove(gConfgiFile);
                 file.open(gConfgiFile,"w+");
-                print(_GET.ssid);
                 file.writeline(_GET.ssid);
                 file.writeline(_GET.pass);
                 file.close();
